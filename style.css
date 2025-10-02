@@ -1,0 +1,283 @@
+/* ==== CORES PRINCIPAIS (fácil de mudar) ==== */
+:root {
+  --page-bg: rgb(0, 0, 0);   /* Fundo da página */
+  --form-bg: rgb(246, 246, 246);   /* Fundo do container */
+}
+
+/* ==== ESTILIZAÇÃO GERAL ==== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--page-bg);
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px;
+}
+
+#form-section {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin: 0%;
+}
+
+.box {
+  background-color: var(--page-bg);
+  padding: 20px;
+  border: 1px solid #e3d858;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(216, 6, 6, 0.63);
+  margin-top: 20px;
+  width: 600px;    /* Altere para o valor desejado */
+  height: auto;    /* Ou defina uma altura fixa, ex: height: 500px; */
+  max-width: 94vw; /* Garante que não ultrapasse a tela */
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr; /* Um único campo por linha */
+  gap: 15px; /* Espaço entre os campos */
+  align-items: center; /* Alinha os campos verticalmente */
+  justify-items: stretch; /* Faz com que os campos ocupem toda a largura disponível */
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid #fefefe;
+  padding: 15px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px; /* Espaço abaixo do label */
+  font-size: 1rem; /* Tamanho da fonte para os labels */
+  color: #ffffff; /* <-- Altere aqui para a cor desejada */
+}
+
+input, select {
+  width: 94%;
+  padding: 12px;
+  margin: 5px 0 10px 0; /* Espaço acima e abaixo dos campos */
+  border: 1px solid #000000;
+  border-radius: 7px;
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+  font-size: 1rem; /* Tamanho da fonte para os campos */
+  color: #030202; /* <-- Altere aqui para a cor desejada do texto digitado */
+}
+
+.button-container {
+  margin-top: 20px;
+  text-align: left; /* Alinha o botão à esquerda */
+}
+
+button {
+  background-color: #d2d2e2;
+  color: #0b0404;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 94%; /* O botão ocupa toda a largura disponível */
+  font-size: 1rem; /* Tamanho da fonte para o botão */
+}
+
+button:hover {
+  background-color: #2bd00ab3;
+}
+
+#players {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ==== ESTILIZAÇÃO imagens ==== */
+.banner {
+  width: 100vw;           /* largura total da tela */
+  height: 500px;         /* ajuste a altura conforme necessário */
+  overflow: hidden;      /* esconde o que ultrapassar */
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: calc(100% * 10);   /* 10 imagens, ajuste se mudar a quantidade */
+  height: 100%;
+  animation: slide 15s infinite;
+}
+
+.slides img {
+  width: 10%;              /* 100% dividido pelo número de imagens */
+  height: 100%;
+  object-fit: cover;       /* cobre a área mantendo proporção */
+}
+
+/* Animação automática do carrossel */
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+  25%  { transform: translateX(-20%); }
+  45%  { transform: translateX(-20%); }
+  50%  { transform: translateX(-40%); }
+  70%  { transform: translateX(-40%); }
+  75%  { transform: translateX(-60%); }
+  95%  { transform: translateX(-60%); }
+  100% { transform: translateX(0%); }
+}
+
+/* ==== RODAPÉ ==== */
+.site-footer {
+  background-color: #1d1f27;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  margin: 0 0 10px 0;
+  font-size: 0.9em;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links li a {
+  color: #4167c7;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: rgb(0, 61, 184);
+}
+
+/* ==== CABEÇALHO ==== */
+header {
+  text-align: center;
+  background: linear-gradient(90deg, rgb(233, 202, 47) 0%, rgb(231, 63, 63) 100%);
+  padding: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: static;   /* Mantém fixo no topo ao rolar */
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-style: italic;
+  font-size: 2em;
+  font-family: 'Sixtyfour', Arial, sans-serif;
+  color: #000000; 
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+header p {
+  margin: 10px 0 20px;
+  font-size: 1.3em;
+  color: #000000e2;
+}
+
+
+/* ==== RESPONSIVIDADE PARA CELULAR ==== */
+@media (max-width: 600px) {
+  .box {
+    width: 94vw;
+    max-width: 94vw;
+    padding: 10px;
+  }
+
+  main, #form-section {
+    padding: 10px;
+    max-width: 100vw;
+  }
+
+  input, select, button {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .banner {
+    width: 100vw;
+    height: 200px;
+  }
+
+  #players {
+    max-width: 100vw;
+    padding: 5px;
+  }
+
+  fieldset {
+    padding: 8px;
+  }
+}
+
+/* ==== MENU DE NAVEGAÇÃO ==== */
+nav ul {
+  display: flex;
+  justify-content: center; /* Centraliza o menu */
+  gap: 24px;               /* Espaço entre os itens */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #f3efef;             /* Cor dos links */
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: #000000;     /* Fundo ao passar o mouse */
+  color: #ffffff;          /* Cor do texto ao passar o mouse */
+}
+
+
+
+/* Lista de jogadores  */
+ul#playerList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul#playerList li {
+    background-color: #f4f4f4;
+    color : #000000;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogue com novos amigos</title>
+    <!-- Adicione os links da fonte aqui -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!---- Arquivo CSS externo Estilização ---->
+
+    
+</head>
+<body>
+    <header> <!-- Cabeçalho do site -->        
+        </form>
+        <h1>Game Verse</h1>  
+        <p>Conecte-se com jogadores ao redor do mundo </p>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#form-section">Cadastro</a></li>
+                <li><a href="#Lista-de-jogadores">Jogadores</a></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <main>
+        <section class="banner">
+            <div class="slides">
+                <img src="img/halo.jpg" alt="Banner-1">
+                <img src="img/banner2.jpg" alt="Banner-2">
+                <img src="img/banner3.jpg" alt="Banner-3">
+                <img src="img/img4.jpg" alt="Banner-4">
+                <img src="img/img5.jpg" alt="Banner-5">
+                <img src="img/zerodown.jpg" alt="Banner-6">
+                <img src="img/a1.jpg" alt="Banner-7">
+                <img src="img/a2.jpg" alt="Banner-8">
+                <img src="img/a5.jpeg" alt="Banner-9">
+                
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>Nosso site é dedicado a conectar jogadores de todas as plataformas e gêneros. Quer você seja um jogador casual ou um entusiasta hardcore, aqui você encontrará pessoas com interesses semelhantes para jogar junto.</p>
+            
+            <p><strong>Por que criamos este site?</strong>
+
+Criamos esta plataforma porque sabemos como pode ser difícil encontrar amigos para jogar online. Muitos jogadores acabam jogando sozinhos ou não têm com quem compartilhar suas experiências. Nosso objetivo é facilitar essas conexões e tornar o ato de jogar ainda mais divertido.
+
+Mais do que apenas um espaço para encontrar companheiros de partida, nossa plataforma foi pensada como uma verdadeira rede social para gamers. Um lugar onde pessoas com os mesmos interesses possam se conhecer, conversar, trocar dicas, formar equipes e, principalmente, jogar juntas. Aqui, você pode criar seu perfil, mostrar os jogos que mais curte, encontrar pessoas com gostos parecidos e começar a construir uma comunidade ao seu redor.
+
+Acreditamos que o jogo vai muito além da tela: ele é sobre interação, amizade e experiências compartilhadas. Por isso, desenvolvemos funcionalidades que incentivam a comunicação e a criação de vínculos — desde chats e grupos temáticos até recomendações de amizades baseadas nos seus jogos favoritos.
+
+Seja você um jogador casual ou alguém que leva a competição a sério, aqui é o seu lugar para se conectar com quem realmente entende o seu universo. Nossa missão é transformar o cenário dos jogos online em um ambiente mais social, acessível e acolhedor, onde ninguém precise jogar sozinho, a menos que queira.
+
+Junte-se a nós e descubra como o jogo pode ser ainda mais incrível quando compartilhado com outros!
+</p>
+        </section>
+
+        <section id="form-section">
+            <h3> Cadastre-se Aqui! </h3>
+            <p> Preencha as informações abaixo para se cadastrar e encontrar novos amigos para jogar. </p>
+
+            <div class="box"><!-- Div para estilização do formulário -->
+                <form id="gameform" method="post">
+                    <fieldset>
+                        <legend> Formulário de Jogadores </legend>
+                        
+                        <label for="name">Nome: </label>
+                        <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+                        
+                        <label for="game">Jogo: </label>
+                        <input type="text" id="game" name="game" required placeholder="Digite o nome do jogo">
+
+                        <label for="plataforma">Plataforma: </label>
+                        <select id="plataforma" name="plataforma" required>
+                            <option value="" disabled selected>Selecione sua plataforma</option>
+                            <option value="PC">PC</option>
+                            <option value="PlayStation">PlayStation</option>
+                            <option value="Xbox">Xbox</option>
+                            <option value="Nintendo">Nintendo</option>
+                            <option value="Mobile">Mobile</option>
+                        </select>
+
+                        <label for="genero">Estilo de Jogo: </label>
+                        <select id="genero" name="genero" required>
+                            <option value="" disabled selected>Selecione o estilo do jogo</option>
+                            <option value="Ação">Ação</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="RPG">RPG</option>
+                            <option value="Esporte">Esporte</option>
+                            <option value="Estratégia">Estratégia</option>
+                            <option value="Simulação">Simulação</option>
+                            <option value="Tiro">Tiro</option>
+                            <option value="Corrida">Corrida</option>
+                        </select>
+
+                        <label for="nickname">Nickname: </label>
+                        <input type="text" id="nickname" name="nickname" required placeholder="Digite seu nickname">
+
+                        <div class="button-container">
+                           <button type="submit" aria-label="Cadastrar jogador">Cadastrar</button>
+                        </div>
+                     
+                    </fieldset>
+                </form>
+            </div>          
+        </section>
+
+        <section id="Lista-de-jogadores">
+            <h2>Jogadores Cadastrados</h2>
+            <ul id="playerList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script> <!-- Arquivo JavaScript externo -->
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Jogue com Amigos. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
